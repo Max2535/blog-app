@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# Blog App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React + TypeScript demo blog app (bootstrapped with Create React App). It demonstrates basic post rendering and interactive UI features used while developing a blog-style interface.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Search posts by title (case-insensitive substring match)
+- Sort posts by date, likes, or comments (ascending / descending)
+- Simulated API loading with skeleton placeholders
+- Responsive layouts for mobile, tablet and desktop
 
-### `npm start`
+## Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install dependencies and start the dev server:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm install
+npm start
+```
 
-### `npm test`
+Open http://localhost:3000 in your browser. The app simulates a short API delay on load and displays skeletons while fetching posts.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Controls
 
-### `npm run build`
+- Search: type in the search box to filter posts by title.
+- Sort: choose a sort key and toggle ascending/descending to reorder posts.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Development notes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Mock posts are defined in `src/App.tsx` (`initialPosts`). In a real app replace the simulated fetch with an API call in the `useEffect` hook.
+- Responsive styles use Tailwind utility classes; adjust breakpoints and classes in the components to change behavior for mobile/tablet/desktop.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Want more?
 
-### `npm run eject`
+- Add URL sync for the search query (`?q=...`) so results are shareable.
+- Debounce the search input for better performance with large lists.
+- Replace simulated loading with a real API and add error handling.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is for demo purposes.
